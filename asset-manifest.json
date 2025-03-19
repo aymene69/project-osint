@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/project-osint/static/css/main.f9f6ddea.css",
+    "main.js": "/project-osint/static/js/main.cfbfe910.js",
+    "static/js/453.c2fc8b67.chunk.js": "/project-osint/static/js/453.c2fc8b67.chunk.js",
+    "index.html": "/project-osint/index.html",
+    "main.f9f6ddea.css.map": "/project-osint/static/css/main.f9f6ddea.css.map",
+    "main.cfbfe910.js.map": "/project-osint/static/js/main.cfbfe910.js.map",
+    "453.c2fc8b67.chunk.js.map": "/project-osint/static/js/453.c2fc8b67.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f9f6ddea.css",
+    "static/js/main.cfbfe910.js"
+  ]
+}
