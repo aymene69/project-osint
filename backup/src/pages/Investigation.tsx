@@ -1,30 +1,6 @@
 import React from 'react';
 import { Search, Filter, FileSearch, Brain } from 'lucide-react';
 
-interface StepCardProps {
-  number: string;
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}
-
-function StepCard({ number, icon, title, description }: StepCardProps) {
-  return (
-    <div className="flex items-start space-x-6">
-      <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-blue-500/10 text-blue-400">
-        {icon}
-      </div>
-      <div>
-        <div className="flex items-center space-x-3 mb-2">
-          <span className="text-sm font-semibold text-blue-400">ÉTAPE {number}</span>
-          <h3 className="text-xl font-semibold text-white">{title}</h3>
-        </div>
-        <p className="text-gray-400">{description}</p>
-      </div>
-    </div>
-  );
-}
-
 function Investigation() {
   return (
     <div className="min-h-screen py-24">
@@ -86,6 +62,23 @@ function Investigation() {
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+  );
+}
+
+function StepCard({ number, icon, title, description }) {
+  return (
+    <div className="flex items-start space-x-6">
+      <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-blue-500/10 text-blue-400">
+        {icon}
+      </div>
+      <div>
+        <div className="flex items-center space-x-3 mb-2">
+          <span className="text-sm font-semibold text-blue-400">ÉTAPE {number}</span>
+          <h3 className="text-xl font-semibold text-white">{title}</h3>
+        </div>
+        <p className="text-gray-400">{description}</p>
       </div>
     </div>
   );

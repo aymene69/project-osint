@@ -1,22 +1,6 @@
 import React from 'react';
 import { Shield, Search, Database, Brain } from 'lucide-react';
 
-interface FeatureCardProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}
-
-function FeatureCard({ icon, title, description }: FeatureCardProps) {
-  return (
-    <div className="p-8 transition-all duration-300 bg-slate-900/50 rounded-2xl hover:bg-slate-700/50 border border-white/5">
-      <div className="mb-4 text-blue-400">{icon}</div>
-      <h3 className="mb-3 text-xl font-semibold text-white">{title}</h3>
-      <p className="text-gray-400">{description}</p>
-    </div>
-  );
-}
-
 function Home() {
   return (
     <div className="min-h-screen">
@@ -95,6 +79,16 @@ function Home() {
           </div>
         </div>
       </section>
+    </div>
+  );
+}
+
+function FeatureCard({ icon, title, description }) {
+  return (
+    <div className="p-8 transition-all duration-300 bg-slate-900/50 rounded-2xl hover:bg-slate-700/50 border border-white/5">
+      <div className="mb-4 text-blue-400">{icon}</div>
+      <h3 className="mb-3 text-xl font-semibold text-white">{title}</h3>
+      <p className="text-gray-400">{description}</p>
     </div>
   );
 }

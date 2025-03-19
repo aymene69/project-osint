@@ -1,5 +1,32 @@
 import React from 'react';
-import { Search, Globe, Database, Network, Shield } from 'lucide-react';
+import { Search, Globe, Database, Network, Shield, Code } from 'lucide-react';
+
+interface ToolCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  features: string[];
+}
+
+function ToolCard({ icon, title, description, features }: ToolCardProps) {
+  return (
+    <div className="p-8 bg-slate-800/50 rounded-2xl border border-white/5">
+      <div className="flex items-center space-x-4 mb-6">
+        <div className="text-blue-400">{icon}</div>
+        <h3 className="text-xl font-semibold text-white">{title}</h3>
+      </div>
+      <p className="text-gray-300 mb-6">{description}</p>
+      <ul className="space-y-4">
+        {features.map((feature: string, index: number) => (
+          <li key={index} className="flex items-start space-x-3">
+            <span className="text-blue-400 flex-shrink-0 mt-1">•</span>
+            <span className="text-gray-300">{feature}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 function Tools() {
   return (
@@ -12,54 +39,48 @@ function Tools() {
             icon={<Search />}
             title="Moteurs de Recherche"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            tools={["Google Dorks", "Bing", "DuckDuckGo"]}
+            features={["Google Dorks", "Bing", "DuckDuckGo"]}
           />
           
           <ToolCard
             icon={<Globe />}
             title="Analyse Web"
             description="Ut enim ad minim veniam, quis nostrud exercitation."
-            tools={["Wayback Machine", "BuiltWith", "Wappalyzer"]}
+            features={["Wayback Machine", "BuiltWith", "Wappalyzer"]}
           />
           
           <ToolCard
             icon={<Database />}
             title="Bases de Données"
             description="Duis aute irure dolor in reprehenderit in voluptate."
-            tools={["Shodan", "Censys", "ZoomEye"]}
+            features={["Shodan", "Censys", "ZoomEye"]}
           />
           
           <ToolCard
             icon={<Network />}
             title="Réseaux Sociaux"
             description="Excepteur sint occaecat cupidatat non proident."
-            tools={["Maltego", "Twint", "Sherlock"]}
+            features={["Maltego", "Twint", "Sherlock"]}
           />
           
           <ToolCard
             icon={<Shield />}
             title="Sécurité"
             description="Sed do eiusmod tempor incididunt ut labore."
-            tools={["Have I Been Pwned", "VirusTotal", "URLScan"]}
+            features={["Have I Been Pwned", "VirusTotal", "URLScan"]}
+          />
+          
+          <ToolCard
+            icon={<Code />}
+            title="Analyse de Code"
+            description="Inspection approfondie du code source pour identifier les problèmes potentiels."
+            features={[
+              "Analyse statique",
+              "Détection de malwares",
+              "Audit de sécurité"
+            ]}
           />
         </div>
-      </div>
-    </div>
-  );
-}
-
-function ToolCard({ icon, title, description, tools }) {
-  return (
-    <div className="p-8 bg-slate-800/50 rounded-2xl border border-white/5 hover:bg-slate-700/50 transition-all duration-300">
-      <div className="mb-4 text-blue-400">{icon}</div>
-      <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
-      <p className="text-gray-400 mb-4">{description}</p>
-      <div className="flex flex-wrap gap-2">
-        {tools.map((tool, index) => (
-          <span key={index} className="px-3 py-1 text-sm bg-blue-500/10 text-blue-400 rounded-full">
-            {tool}
-          </span>
-        ))}
       </div>
     </div>
   );

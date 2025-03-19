@@ -1,31 +1,6 @@
 import React from 'react';
 import { Shield, Lock, Eye, AlertTriangle } from 'lucide-react';
 
-interface SecurityCardProps {
-  icon: React.ReactNode;
-  title: string;
-  points: string[];
-}
-
-function SecurityCard({ icon, title, points }: SecurityCardProps) {
-  return (
-    <div className="p-8 bg-slate-800/50 rounded-2xl border border-white/5">
-      <div className="flex items-center space-x-4 mb-6">
-        <div className="text-blue-400">{icon}</div>
-        <h3 className="text-xl font-semibold text-white">{title}</h3>
-      </div>
-      <ul className="space-y-4">
-        {points.map((point: string, index: number) => (
-          <li key={index} className="flex items-start space-x-3">
-            <span className="text-blue-400 flex-shrink-0 mt-1">•</span>
-            <span className="text-gray-300">{point}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
 function Security() {
   return (
     <div className="min-h-screen py-24">
@@ -97,6 +72,25 @@ function Security() {
           />
         </div>
       </div>
+    </div>
+  );
+}
+
+function SecurityCard({ icon, title, points }) {
+  return (
+    <div className="p-8 bg-slate-800/50 rounded-2xl border border-white/5">
+      <div className="flex items-center space-x-4 mb-6">
+        <div className="text-blue-400">{icon}</div>
+        <h3 className="text-xl font-semibold text-white">{title}</h3>
+      </div>
+      <ul className="space-y-4">
+        {points.map((point, index) => (
+          <li key={index} className="flex items-start space-x-3">
+            <span className="text-blue-400 flex-shrink-0 mt-1">•</span>
+            <span className="text-gray-300">{point}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
