@@ -1,1 +1,1 @@
-# project-osing
+# project-osint
