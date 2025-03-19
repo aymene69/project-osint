@@ -34,52 +34,54 @@ function Tools() {
       <div className="px-4 mx-auto max-w-7xl">
         <h1 className="mb-12 text-5xl font-bold text-white">Outils OSINT</h1>
         
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <ToolCard
-            icon={<Search />}
-            title="Moteurs de Recherche"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            features={["Google Dorks", "Bing", "DuckDuckGo"]}
-          />
-          
-          <ToolCard
-            icon={<Globe />}
-            title="Analyse Web"
-            description="Ut enim ad minim veniam, quis nostrud exercitation."
-            features={["Wayback Machine", "BuiltWith", "Wappalyzer"]}
-          />
-          
-          <ToolCard
-            icon={<Database />}
-            title="Bases de Données"
-            description="Duis aute irure dolor in reprehenderit in voluptate."
-            features={["Shodan", "Censys", "ZoomEye"]}
-          />
-          
-          <ToolCard
-            icon={<Network />}
-            title="Réseaux Sociaux"
-            description="Excepteur sint occaecat cupidatat non proident."
-            features={["Maltego", "Twint", "Sherlock"]}
-          />
-          
-          <ToolCard
-            icon={<Shield />}
-            title="Sécurité"
-            description="Sed do eiusmod tempor incididunt ut labore."
-            features={["Have I Been Pwned", "VirusTotal", "URLScan"]}
-          />
-          
-          <ToolCard
-            icon={<Code />}
-            title="Analyse de Code"
-            description="Inspection approfondie du code source pour identifier les problèmes potentiels."
-            features={[
-              "Analyse statique",
-              "Détection de malwares",
-              "Audit de sécurité"
-            ]}
-          />
+        <div className="container-custom">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <ToolCard
+              icon={<Search />}
+              title="Moteurs de Recherche"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              features={["Google Dorks", "Bing", "DuckDuckGo"]}
+            />
+            
+            <ToolCard
+              icon={<Globe />}
+              title="Analyse Web"
+              description="Ut enim ad minim veniam, quis nostrud exercitation."
+              features={["Wayback Machine", "BuiltWith", "Wappalyzer"]}
+            />
+            
+            <ToolCard
+              icon={<Database />}
+              title="Bases de Données"
+              description="Duis aute irure dolor in reprehenderit in voluptate."
+              features={["Shodan", "Censys", "ZoomEye"]}
+            />
+            
+            <ToolCard
+              icon={<Network />}
+              title="Réseaux Sociaux"
+              description="Excepteur sint occaecat cupidatat non proident."
+              features={["Maltego", "Twint", "Sherlock"]}
+            />
+            
+            <ToolCard
+              icon={<Shield />}
+              title="Sécurité"
+              description="Sed do eiusmod tempor incididunt ut labore."
+              features={["Have I Been Pwned", "VirusTotal", "URLScan"]}
+            />
+            
+            <ToolCard
+              icon={<Code />}
+              title="Analyse de Code"
+              description="Inspection approfondie du code source pour identifier les problèmes potentiels."
+              features={[
+                "Analyse statique",
+                "Détection de malwares",
+                "Audit de sécurité"
+              ]}
+            />
+          </div>
         </div>
       </div>
     </div>

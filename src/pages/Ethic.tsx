@@ -1,13 +1,13 @@
 import React from 'react';
 import { Shield, Lock, Eye, AlertTriangle } from 'lucide-react';
 
-interface SecurityCardProps {
+interface EthicCardProps {
   icon: React.ReactNode;
   title: string;
   points: string[];
 }
 
-function SecurityCard({ icon, title, points }: SecurityCardProps) {
+function EthicCard({ icon, title, points }: EthicCardProps) {
   return (
     <div className="p-8 bg-slate-800/50 rounded-2xl border border-white/5">
       <div className="flex items-center space-x-4 mb-6">
@@ -26,7 +26,7 @@ function SecurityCard({ icon, title, points }: SecurityCardProps) {
   );
 }
 
-function Security() {
+function Ethic() {
   return (
     <div className="min-h-screen py-24">
       <div className="px-4 mx-auto max-w-7xl">
@@ -54,10 +54,10 @@ function Security() {
           </div>
         </div>
 
-        {/* Security Cards */}
+        {/* Ethic Cards */}
         <div className="container-custom">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <SecurityCard
+            <EthicCard
               icon={<Shield className="w-8 h-8" />}
               title="Protection de la Vie Privée"
               points={[
@@ -67,7 +67,7 @@ function Security() {
               ]}
             />
             
-            <SecurityCard
+            <EthicCard
               icon={<Lock className="w-8 h-8" />}
               title="Sécurité en Ligne"
               points={[
@@ -77,7 +77,7 @@ function Security() {
               ]}
             />
             
-            <SecurityCard
+            <EthicCard
               icon={<Eye className="w-8 h-8" />}
               title="Surveillance"
               points={[
@@ -87,7 +87,7 @@ function Security() {
               ]}
             />
             
-            <SecurityCard
+            <EthicCard
               icon={<AlertTriangle className="w-8 h-8" />}
               title="Risques et Menaces"
               points={[
@@ -103,4 +103,4 @@ function Security() {
   );
 }
 
-export default Security;
+export default Ethic;

@@ -28,7 +28,7 @@ function StepCard({ number, icon, title, description }: StepCardProps) {
 function Investigation() {
   return (
     <div className="min-h-screen py-24">
-      <div className="px-4 mx-auto max-w-7xl">
+      <div className="container-custom">
         <h1 className="mb-12 text-5xl font-bold text-white">Méthodologie d'Enquête</h1>
 
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
