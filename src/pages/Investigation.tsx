@@ -176,6 +176,90 @@ function Investigation() {
             </div>
           </div>
         </div>
+
+        {/* Deuxième cas d'investigation */}
+        <div className="mt-16 bg-slate-800/50 rounded-2xl border border-white/5 p-8 max-w-7xl mx-auto">
+          <h2 className="text-2xl font-bold text-white mb-6">2ème cas: fake news sur Rennes 2</h2>
+          
+          <div className="space-y-8">
+            <div>
+              <p className="text-gray-300 mb-6">
+                Imaginons désormais qu'un utilisateur publie un tweet (ou un X désormais) affirmant qu'une manifestation monstre a lieu à l'Université de Rennes 2.
+                Ce tweet, vu par des centaines de milliers d'utilisateurs pourrait entrainer des soulèvements dans d'autres universités de France. La ville de Rennes étant pas trop connue du français moyen,
+                beaucoup de personnes pourraient être induites en erreur.
+              </p>
+
+              <div className="my-8">
+                <img src="./images/tweet.png" alt="Tweet" className="rounded-lg w-full max-w-2xl mx-auto" />
+              </div>
+            </div>
+
+            <div>
+              <p className="text-gray-300 mb-6">
+                L'objectif de cette enquête est de démontrer que les techniques d'OSINT peuvent être utilisées pour débusquer les fake news et trouver l'origine de la vidéo originale.
+              </p>
+
+              <div className="my-8">
+                <video src="./videos/1.mp4" className="rounded-lg w-full max-w-2xl mx-auto" controls />
+              </div>
+            </div>
+
+            <div>
+              <p className="text-gray-300 mb-6">
+                Voici la vidéo originale, qui montre une manifestation de 1000 personnes à l'Université de Rennes 2.
+                La première façon de pouvoir démontrer que cette vidéo est fausse est de la comparer avec des images satellites de l'Université de Rennes 2. Un rapide coup d'oeil à Google Maps suffit à montrer que l'Université de Rennes 2 n'est clairement pas l'endroit où se trouve la vidéo.
+              </p>
+
+              <div className="my-8">
+                <img src="./images/4.png" alt="Map" className="rounded-lg w-full max-w-2xl mx-auto" />
+              </div>
+            </div>
+
+            <div>
+              <p className="text-gray-300 mb-6">
+                Mais alors trouvons donc l'origine de la vidéo originale. Pour cela, nous allons utiliser les techniques d'OSINT. On peut apercevoir un préau, un batiment gris aux formes géométriques ainsi qu'un batiment de 2 étages.
+                On pourrait tout d'abord jeter un coup d'oeil aux universités "chaudes" de France, comme l'Université de Paris Nanterre, Paris 3 ou encore Lyon 2. Un coup d'oeil à Google Maps permet de voir que l'Université de Lyon 2 pourrait correspondre à l'endroit de la vidéo notamment grâce à la forme géométrique du bâtiment.
+              </p>
+
+              <div className="my-8">
+                <img src="./images/5.png" alt="Map" className="rounded-lg w-full max-w-2xl mx-auto" />
+              </div>
+            </div>
+
+            <div>
+              <p className="text-gray-300 mb-6">
+                Tout y est sauf une partie, semblant en travaux.
+              </p>
+
+              <div className="my-8 space-y-6">
+                <img src="./images/6.png" alt="Map" className="rounded-lg w-full max-w-2xl mx-auto" />
+                <img src="./images/7.png" alt="Map" className="rounded-lg w-full max-w-2xl mx-auto" />
+              </div>
+            </div>
+
+            <div>
+              <p className="text-gray-300 mb-6">
+                On peut donc essayer de remonter dans le temps, en regardant les images satellites de l'Université de Lyon 2 avant les travaux. Nous allons utiliser Google Earth pour cela. On n'a pas besoin de remonter à un jour bien précis. Le satellite Sentinel 2, lancé en 2015, aurait été dans ce cas utile pour voir l'évolution entre un delta de temps relativement court.
+              </p>
+
+              <div className="my-8">
+                <img src="./images/8.png" alt="Map" className="rounded-lg w-full max-w-2xl mx-auto" />
+              </div>
+            </div>
+
+            <div>
+              <p className="text-gray-300 mb-6">
+                Une image de 2022 montre que la partie en travaux n'existait pas encore. On peut donc en déduire que la vidéo originale a été tournée en 2022 ou plus tôt au sein de l'Université de Lyon 2.
+                Pour trouver la vidéo originale, il suffit de chercher sur les réseaux la première apparition de la vidéo. Une recherche par exemple sur Twitter de "blocus lyon 2" avec une date avant 2022 pourrait aider à trouver la vidéo originale.
+                Nous tombons sur ce tweet de 2019, qui est en réalité la vidéo prise par Taha Bouhafs, non disponible sur son compte après une recherche avec les dorks adéquats. On en déduit que la vidéo a été tournée puis transmise au compte Twitter en question pour une première publication le 14 novembre 2019.
+              </p>
+
+              <div className="my-8">
+                <img src="./images/9.png" alt="Map" className="rounded-lg w-full max-w-2xl mx-auto" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
