@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Globe, Database, Network, Shield, Code } from 'lucide-react';
+import { Search, Globe, Database, Network, Shield } from 'lucide-react';
 
 interface ToolCardProps {
   icon: React.ReactNode;
