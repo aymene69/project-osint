@@ -11,9 +11,9 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-lg border-b border-white/5">
-      <div className="px-4 mx-auto max-w-7xl">
-        <div className="flex items-center justify-between h-16">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-lg">
+      <div className="px-6 mx-auto max-w-5xl">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="text-xl font-bold text-white">
             OSINT
@@ -28,6 +28,14 @@ function Navbar() {
               }`}
             >
               Accueil
+            </Link>
+            <Link
+              to="/tools"
+              className={`text-sm font-medium transition-colors ${
+                isActive('/tools') ? 'text-blue-400' : 'text-gray-300 hover:text-white'
+              }`}
+            >
+              Outils
             </Link>
             <Link
               to="/investigation"
@@ -46,12 +54,12 @@ function Navbar() {
               Sécurité
             </Link>
             <Link
-              to="/tools"
+              to="/ethic"
               className={`text-sm font-medium transition-colors ${
-                isActive('/tools') ? 'text-blue-400' : 'text-gray-300 hover:text-white'
+                isActive('/ethic') ? 'text-blue-400' : 'text-gray-300 hover:text-white'
               }`}
             >
-              Outils
+              Ethique
             </Link>
           </div>
 
@@ -66,8 +74,8 @@ function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4">
-            <div className="flex flex-col space-y-4">
+          <div className="md:hidden py-6">
+            <div className="flex flex-col space-y-6">
               <Link
                 to="/"
                 className={`text-sm font-medium transition-colors ${
@@ -76,6 +84,15 @@ function Navbar() {
                 onClick={() => setIsOpen(false)}
               >
                 Accueil
+              </Link>
+              <Link
+                to="/tools"
+                className={`text-sm font-medium transition-colors ${
+                  isActive('/tools') ? 'text-blue-400' : 'text-gray-300 hover:text-white'
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                Outils
               </Link>
               <Link
                 to="/investigation"
@@ -96,13 +113,13 @@ function Navbar() {
                 Sécurité
               </Link>
               <Link
-                to="/tools"
+                to="/ethic"
                 className={`text-sm font-medium transition-colors ${
-                  isActive('/tools') ? 'text-blue-400' : 'text-gray-300 hover:text-white'
+                  isActive('/ethic') ? 'text-blue-400' : 'text-gray-300 hover:text-white'
                 }`}
                 onClick={() => setIsOpen(false)}
               >
-                Outils
+                Ethique
               </Link>
             </div>
           </div>

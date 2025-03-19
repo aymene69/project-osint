@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Tools from './pages/Tools';
 import Investigation from './pages/Investigation';
 import Security from './pages/Security';
+import Ethic from './pages/Ethic';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/investigation" element={<Investigation />} />
           <Route path="/security" element={<Security />} />
           <Route path="/tools" element={<Tools />} />
+          <Route path="/ethic" element={<Ethic />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />
