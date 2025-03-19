@@ -55,7 +55,7 @@ function Home() {
             <div>
               <h2 className="mb-6 text-4xl font-bold text-white">Qu'est-ce que l'OSINT ?</h2>
               <p className="text-gray-300 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                AAAAAALorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </p>
             </div>
             <div>
