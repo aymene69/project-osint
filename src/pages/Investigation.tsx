@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Filter, FileSearch, Brain } from 'lucide-react';
+import { Search, Shield, Database, Brain } from 'lucide-react';
 
 interface StepCardProps {
   number: string;
@@ -10,17 +10,15 @@ interface StepCardProps {
 
 function StepCard({ number, icon, title, description }: StepCardProps) {
   return (
-    <div className="flex items-start space-x-6">
-      <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-blue-500/10 text-blue-400">
-        {icon}
-      </div>
-      <div>
-        <div className="flex items-center space-x-3 mb-2">
-          <span className="text-sm font-semibold text-blue-400">ÉTAPE {number}</span>
+    <div className="p-8 bg-slate-800/50 rounded-2xl border border-white/5">
+      <div className="flex items-center space-x-4 mb-6">
+        <div className="text-blue-400">{icon}</div>
+        <div className="flex items-center space-x-2">
+          <span className="text-sm font-medium text-blue-400">{number}</span>
           <h3 className="text-xl font-semibold text-white">{title}</h3>
         </div>
-        <p className="text-gray-400">{description}</p>
       </div>
+      <p className="text-gray-300">{description}</p>
     </div>
   );
 }
@@ -28,63 +26,60 @@ function StepCard({ number, icon, title, description }: StepCardProps) {
 function Investigation() {
   return (
     <div className="min-h-screen py-24">
-      <div className="container-custom">
-        <h1 className="mb-12 text-5xl font-bold text-white">Méthodologie d'Enquête</h1>
+      <div className="px-4 mx-auto max-w-7xl">
+        <h1 className="mb-12 text-5xl font-bold text-white">Guide d'Investigation OSINT</h1>
 
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
-          {/* Steps */}
-          <div className="space-y-8">
-            <StepCard
-              number="01"
-              icon={<Search />}
-              title="Définition des Objectifs"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
-            />
-            
-            <StepCard
-              number="02"
-              icon={<Filter />}
-              title="Collecte d'Information"
-              description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-            />
-            
-            <StepCard
-              number="03"
-              icon={<FileSearch />}
-              title="Analyse des Données"
-              description="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            />
-            
-            <StepCard
-              number="04"
-              icon={<Brain />}
-              title="Synthèse"
-              description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
-            />
+        {/* Main Content */}
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 mb-16">
+          <div>
+            <h2 className="text-3xl font-bold text-white mb-6">Méthodologie</h2>
+            <p className="text-gray-300 leading-relaxed mb-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p className="text-gray-300 leading-relaxed">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+            </p>
           </div>
+          <div>
+            <h2 className="text-3xl font-bold text-white mb-6">Bonnes Pratiques</h2>
+            <p className="text-gray-300 leading-relaxed mb-6">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+            </p>
+            <p className="text-gray-300 leading-relaxed">
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+            </p>
+          </div>
+        </div>
 
-          {/* Best Practices */}
-          <div className="bg-slate-800/50 p-8 rounded-2xl border border-white/5">
-            <h2 className="text-2xl font-bold text-white mb-6">Bonnes Pratiques</h2>
-            <ul className="space-y-4">
-              <li className="flex items-start space-x-3 text-gray-300">
-                <span className="text-blue-400">•</span>
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-              </li>
-              <li className="flex items-start space-x-3 text-gray-300">
-                <span className="text-blue-400">•</span>
-                <span>Ut enim ad minim veniam, quis nostrud exercitation.</span>
-              </li>
-              <li className="flex items-start space-x-3 text-gray-300">
-                <span className="text-blue-400">•</span>
-                <span>Duis aute irure dolor in reprehenderit in voluptate.</span>
-              </li>
-              <li className="flex items-start space-x-3 text-gray-300">
-                <span className="text-blue-400">•</span>
-                <span>Excepteur sint occaecat cupidatat non proident.</span>
-              </li>
-            </ul>
-          </div>
+        {/* Steps */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <StepCard
+            number="01"
+            icon={<Search className="w-8 h-8" />}
+            title="Collecte d'Informations"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam."
+          />
+          
+          <StepCard
+            number="02"
+            icon={<Shield className="w-8 h-8" />}
+            title="Analyse des Sources"
+            description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore."
+          />
+          
+          <StepCard
+            number="03"
+            icon={<Database className="w-8 h-8" />}
+            title="Vérification des Données"
+            description="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia."
+          />
+          
+          <StepCard
+            number="04"
+            icon={<Brain className="w-8 h-8" />}
+            title="Synthèse et Rapport"
+            description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium."
+          />
         </div>
       </div>
     </div>
