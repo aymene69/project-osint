@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -9,7 +9,7 @@ import Ethic from './pages/Ethic';
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <div className="min-h-screen bg-slate-900 text-white">
         <Navbar />
         <Routes>
@@ -18,11 +18,10 @@ function App() {
           <Route path="/security" element={<Security />} />
           <Route path="/tools" element={<Tools />} />
           <Route path="/ethic" element={<Ethic />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 

@@ -1,7 +1,7 @@
 {
   "name": "project-osint",
   "version": "0.1.0",
-  "homepage": "https://aymene69.github.io/project-osint/#",
+  "homepage": "/project-osint/#",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
