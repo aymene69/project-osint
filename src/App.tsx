@@ -1,5 +1,4 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -10,7 +9,7 @@ import Ethic from './pages/Ethic';
 
 function App() {
   return (
-    <Router basename="/project-osint">
+    <Router>
       <div className="min-h-screen bg-slate-900 text-white">
         <Navbar />
         <Routes>
