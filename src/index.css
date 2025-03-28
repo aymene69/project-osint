@@ -35,3 +35,9 @@
     background: #2563eb;
   }
 }
+
+@layer components {
+  .container-custom {
+    @apply px-4 mx-auto max-w-5xl;
+  }
+}

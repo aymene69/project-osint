@@ -1,26 +1,27 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Tools from './pages/Tools';
 import Investigation from './pages/Investigation';
 import Security from './pages/Security';
+import Ethic from './pages/Ethic';
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+    <HashRouter>
+      <div className="min-h-screen bg-slate-900 text-white">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/outils" element={<Tools />} />
-          <Route path="/enquete" element={<Investigation />} />
-          <Route path="/securite" element={<Security />} />
+          <Route path="/investigation" element={<Investigation />} />
+          <Route path="/security" element={<Security />} />
+          <Route path="/tools" element={<Tools />} />
+          <Route path="/ethic" element={<Ethic />} />
         </Routes>
         <Footer />
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
